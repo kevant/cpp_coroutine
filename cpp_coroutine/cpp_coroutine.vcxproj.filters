@@ -39,5 +39,8 @@
     <ClCompile Include="coroutine7_co_return.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="coroutine8_co_return_value.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
