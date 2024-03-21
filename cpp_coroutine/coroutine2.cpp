@@ -55,7 +55,7 @@ struct Coro
 * When the line "co_await Awaiter();" runs, the compiler creates a coroutine handle 
 * and passes it as agrument to the method "Awaiter::await_suspend(std::coroutine_handle<>){...}"
 */
-Coro MyCoroutineFunction()
+Coro MyCoroutine()
 {
     std::cout << "[coroutine] Instruction 1\n";
     co_await Awaiter();
@@ -65,13 +65,13 @@ Coro MyCoroutineFunction()
 }
 
 /*
-* Control is passed between main() and MyCoroutineFunction()
+* Control is passed between main() and MyCoroutine()
 * When the coroutine handle is invoked, it continues from the coroutine's suspension point.
 */
 int main()
 {
     std::cout << "[     main] Invoke MyCoroutine()\n";
-    MyCoroutineFunction();
+    MyCoroutine();
     std::cout << "[     main] Invoke coroutine handle\n";
     s_handle();
     std::cout << "[     main] Invoke coroutine handle\n";

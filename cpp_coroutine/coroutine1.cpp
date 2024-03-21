@@ -1,6 +1,6 @@
 /*
 * Initial setup to create a simple coroutine
-* Control is passed from MyCoroutineFuction() back to main(), through co_await
+* Control is passed from MyCoroutine() back to main(), through co_await
 */
 #include <iostream>
 #include <coroutine>
@@ -29,7 +29,7 @@ struct Coro
 * To suspend coroutine, use co_await, co_yield or co_return,
 * followed by an Awaiter. For now, a pre-defined awaiter is used, std::suspend_always()
 */
-Coro MyCoroutineFuction()
+Coro MyCoroutine()
 {
     std::cout << "[coroutine] Instruction 1\n";
 
@@ -45,6 +45,6 @@ int main()
 {
     // following code will only print 3 lines
     std::cout << "[     main] Invoke MyCoroutine()\n";
-    MyCoroutineFuction(); // only print once
+    MyCoroutine(); // only print once
     std::cout << "[     main] After MyCoroutine()\n";
 }
