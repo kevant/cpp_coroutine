@@ -19,7 +19,7 @@ bool s_first = true;
 
 /*
 * Custom Awaiter is implemented to define specific behaviors at coroutine's suspension point;
-* i.e. store the coroutine handle to s_handle, so it can be invoked in main() function
+* For this case, it is used to store the coroutine handle to s_handle, so it can be invoked in main() function
 */
 struct Awaiter
 {
