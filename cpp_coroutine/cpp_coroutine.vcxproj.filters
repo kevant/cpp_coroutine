@@ -36,5 +36,8 @@
     <ClCompile Include="coroutine6_co_yield_forever.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="coroutine7_co_return.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
