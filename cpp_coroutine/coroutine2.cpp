@@ -76,5 +76,6 @@ int main()
     s_handle();
     std::cout << "[     main] Invoke coroutine handle\n";
     s_handle();
-    std::cout << "[     main] After MyCoroutine()\n";
+
+    std::cout << "[     main] End of main()\n";
 }

@@ -46,5 +46,6 @@ int main()
     // following code will only print 3 lines
     std::cout << "[     main] Invoke MyCoroutine()\n";
     MyCoroutine(); // only print once
-    std::cout << "[     main] After MyCoroutine()\n";
+
+    std::cout << "[     main] End of main()\n";
 }
