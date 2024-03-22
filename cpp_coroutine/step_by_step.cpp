@@ -13,7 +13,10 @@ struct Coro
         std::suspend_always initial_suspend() { return {}; }
         std::suspend_always final_suspend() noexcept { return {}; }
         void unhandled_exception() {}
-        void return_void() {}
+        void return_value(int v)
+        {
+            value = v;
+        }
         std::suspend_always yield_value(int v)
         {
             value = v;
@@ -27,11 +30,14 @@ struct Coro
 Coro MyCoroutine()
 {
     int i = 0;
-    while (true)
+    for (int i = 0; i < 3; ++i)
     {
         std::cout << "[coroutine] yield " << i << "\n";
         co_yield i++;
     }
+
+    std::cout << "[coroutine] co_return\n";
+    co_return 99;
 }
 
 int main()
@@ -42,7 +48,7 @@ int main()
     Coro::promise_type& promise = handle.promise();
     std::cout << "====================================\n";
 
-    for (int i = 0; i < 3; ++i)
+    while (!handle.done())
     {
         handle();
         std::cout << "[     main] promise.value: " << promise.value << '\n';
