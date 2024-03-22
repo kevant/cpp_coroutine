@@ -1,6 +1,10 @@
 /*
-* Initial setup to create a simple coroutine
-* Control is passed from MyCoroutine() back to main(), through co_await
+* How to define a Coroutine function
+    1. Use one of the 3 keywords inside the function; co_await, co_yield and/or co_return
+    2. The function must return a Coroutine Return Object
+	3. Coroutine Return Object have a nested promise_type struct; e.g. Coro::promise_type
+
+* In this example, Control is passed from MyCoroutine() back to main(), through co_await
 */
 #include <iostream>
 #include <coroutine>
