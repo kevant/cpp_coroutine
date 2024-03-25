@@ -24,7 +24,7 @@
     <ClCompile Include="coroutine3_log_method_calls.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="coroutine4a_handle_casting.cpp">
+    <ClCompile Include="coroutine4a_handle_code.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="coroutine4_return_object_and_handle.cpp">
@@ -43,6 +43,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="step_by_step.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="coroutine1a_promise_object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="coroutine3a_Awaiter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

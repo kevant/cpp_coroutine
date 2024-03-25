@@ -46,6 +46,40 @@ struct Coro
     operator std::coroutine_handle<>() const { return handle; }
 };
 
+// This highlights the relationship between handle, address, and prmise
+struct Coro2
+{
+    struct promise_type
+    {
+        void return_void() {}
+        void unhandled_exception() {}
+
+        std::suspend_always initial_suspend() noexcept { return{}; }
+        std::suspend_always final_suspend() noexcept { return{}; }
+
+        // example of CoroutineHandle methods
+        void examples()
+        {
+            // handle_from_promise from promise
+            auto handle_from_promise = std::coroutine_handle<promise_type>::from_promise(*this);
+
+            // address from handle_from_promise
+            auto address = handle_from_promise.address();
+
+            // handle_from_promise from address
+            auto handle_from_address = std::coroutine_handle<promise_type>::from_address(address);
+
+            // promise from handle_from_promise
+            auto promise = handle_from_address.promise();
+
+            //// handle_from_promise's methods
+            handle_from_promise.resume(); // resumes coroutine
+            //handle_from_promise.done(); // check if coroutine is completed
+            handle_from_promise.destroy(); // destroy coroutine
+        }
+    };
+};
+
 Coro MyCoroutine()
 {
     std::cout << "[coroutine] Instruction 1\n";
