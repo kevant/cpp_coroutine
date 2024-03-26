@@ -48,7 +48,16 @@
     <ClCompile Include="coroutine1a_promise_object.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="coroutine3a_Awaiter.cpp">
+    <ClCompile Include="coroutine9_awaiter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="coroutine9a_awaiter_logic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="coroutine9b_await_always_ready.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="coroutine9c_no_suspension.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
