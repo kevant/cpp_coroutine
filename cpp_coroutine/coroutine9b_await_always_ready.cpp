@@ -95,14 +95,12 @@ int main()
     std::cout << "====================================\n";
 
     // nothing from here will be printed,
-    // have to check if handle is already destroyed,
-    // else it will crash due to access violation
-    while (handle.address() != nullptr && 
-        !handle.done())
+    // as the coroutine is finished and handle is destroyed
+    // invoking handle will cause access violation
+    while (handle.address() != nullptr)
     {
         std::cout << "[     main] Invoke coroutine handle\n";
         handle();
-        std::cout << "[     main] End of while scope\n";
     }
 
     std::cout << "====================================\n";
