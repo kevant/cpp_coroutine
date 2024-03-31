@@ -30,9 +30,6 @@
     <ClCompile Include="coroutine4_return_object_and_handle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="coroutine5_co_yield.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="coroutine6_co_yield_forever.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -40,9 +37,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="coroutine8_co_return_value.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="step_by_step.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="coroutine1a_promise_object.cpp">
